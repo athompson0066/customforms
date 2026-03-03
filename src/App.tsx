@@ -2,13 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { GoogleGenAI } from "@google/genai";
 import Markdown from "react-markdown";
-import { 
-  DraftingCompass, 
-  Filter, 
-  CreditCard, 
-  BadgeCheck, 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  DraftingCompass,
+  Filter,
+  CreditCard,
+  BadgeCheck,
+  ArrowRight,
+  CheckCircle2,
   Handshake,
   Linkedin,
   Instagram,
@@ -47,7 +47,7 @@ const Header = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
             Aiolos <span className="text-accent-gold">Media</span>
           </h2>
         </div>
-        
+
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10">
           <a className="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#features">Features</a>
@@ -56,15 +56,15 @@ const Header = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <button 
+          <button
             onClick={onOpenEstimator}
             className="hidden sm:flex items-center justify-center rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(3,0,184,0.4)] cursor-pointer"
           >
             Secure Your Onboarding
           </button>
-          
+
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="flex md:hidden text-white p-2 cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -83,28 +83,28 @@ const Header = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
             className="md:hidden border-t border-white/5 bg-slate-950 overflow-hidden"
           >
             <nav className="flex flex-col p-6 gap-4">
-              <a 
-                className="text-lg font-medium text-slate-400 hover:text-white transition-colors" 
+              <a
+                className="text-lg font-medium text-slate-400 hover:text-white transition-colors"
                 href="#features"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
-              <a 
-                className="text-lg font-medium text-slate-400 hover:text-white transition-colors" 
+              <a
+                className="text-lg font-medium text-slate-400 hover:text-white transition-colors"
                 href="#demo"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Live Demo
               </a>
-              <a 
-                className="text-lg font-medium text-slate-400 hover:text-white transition-colors" 
+              <a
+                className="text-lg font-medium text-slate-400 hover:text-white transition-colors"
                 href="#pricing"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
               </a>
-              <button 
+              <button
                 onClick={() => {
                   onOpenEstimator();
                   setIsMenuOpen(false);
@@ -124,7 +124,7 @@ const Header = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
 const Hero = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
   <section className="relative overflow-hidden px-6 py-12 lg:px-12 lg:py-32">
     <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -142,7 +142,7 @@ const Hero = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
         </p>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col sm:flex-row gap-4">
-            <button 
+            <button
               onClick={onOpenEstimator}
               className="flex h-14 w-full sm:w-auto min-w-[240px] items-center justify-center rounded-xl bg-primary px-8 text-base font-bold text-white transition-all hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
             >
@@ -162,7 +162,7 @@ const Hero = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
           </div>
         </div>
       </motion.div>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -171,7 +171,7 @@ const Hero = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
       >
         <div className="absolute -inset-4 rounded-3xl bg-primary/20 blur-3xl"></div>
         <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
-          <img 
+          <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGIkPk7gQc25j61k8D0MdCwv4DuchkqTJtaHrTWaYPlb3jsHrfcQDQEOdRqty_5NBC3D2qEtBrzJIjaKnLFdY9JXhvS4osgMtIs6SACBXNSvHCAhQGydI102GnDqdmPwKoUXfq_WYDCONdefsigYdV2m2tyQrvze-MokHOLGBpicoh-5ADuDlKE8bmmJwa_SdJMnQF2VMyrVuEQ1pOh90uLai8Baxc6VKlzBpySPlxNk_qrlmw1Y3pgPGsTpQ1WI8yFtOJTpn0h8E"
             alt="Luxury modern architectural kitchen renovation interior"
             className="h-full w-full object-cover"
@@ -188,7 +188,7 @@ const LogicAdvantage = () => (
   <section className="px-6 py-24 lg:px-12 bg-slate-950">
     <div className="mx-auto max-w-7xl">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -222,7 +222,7 @@ const LogicAdvantage = () => (
             </div>
           </div>
         </motion.div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -235,7 +235,7 @@ const LogicAdvantage = () => (
             </div>
             <div className="space-y-4">
               <div className="h-2 w-full rounded-full bg-white/5 overflow-hidden">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "85%" }}
                   transition={{ duration: 1.5, ease: "easeOut" }}
@@ -249,7 +249,7 @@ const LogicAdvantage = () => (
             </div>
             <div className="space-y-4">
               <div className="h-2 w-full rounded-full bg-white/5 overflow-hidden">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "92%" }}
                   transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
@@ -293,7 +293,7 @@ const Features = () => (
             icon: <BadgeCheck size={24} />
           }
         ].map((feature, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -320,7 +320,7 @@ const Demo = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
   <section className="px-6 py-24 lg:px-12" id="demo">
     <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/5 bg-slate-900 p-6 sm:p-8 lg:p-16">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -332,14 +332,14 @@ const Demo = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
           <div className="flex flex-col gap-4 border-l-2 border-accent-gold/40 pl-6">
             <p className="text-sm italic text-slate-300">"Use our live estimator to see exactly how your future widget will perform for your business."</p>
           </div>
-          <button 
+          <button
             onClick={onOpenEstimator}
             className="flex w-full sm:w-fit items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-bold text-white transition-all hover:gap-4 cursor-pointer"
           >
             Try Interactive Demo <ArrowRight size={20} />
           </button>
         </motion.div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -353,7 +353,7 @@ const Demo = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
             <div className="ml-4 h-5 w-full max-w-[200px] rounded bg-white/5"></div>
           </div>
           <div className="relative aspect-video w-full bg-slate-950 p-6 flex items-center justify-center">
-            <img 
+            <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUwGerJsWKqUBxXyn1rpQsnPLUxY8pkxEg7cu40FNf9l6ySXBu2O93Etg8bopg_vsitDc-jX2PlVIOsXxRsdr5FyHlaVU9rEQQBxCVXBZ3GkpiiU-ta1ICBMK-6CXoCchgudEycCEOD0Ifin6WZ-B_csWCKB3lPqL0KLp8YCEnwnzj6lyemAyxIJ7KeB0vQ1llC0uOcmLyUGPY1tHYnq54rjvIJG7ZCy8XKwm2Cns7rlJl6942tshGwYo4Y6nOoWkrzOrG_QMrI9w"
               alt="Digital mockup of a sleek renovation estimator widget interface"
               className="absolute inset-0 h-full w-full object-cover opacity-10"
@@ -400,7 +400,7 @@ const Timeline = () => (
             icon: <Zap size={20} />
           }
         ].map((step, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -454,7 +454,7 @@ const FAQ = () => {
         <div className="space-y-4">
           {faqs.map((faq, i) => (
             <div key={i} className="rounded-2xl border border-white/5 bg-slate-950 overflow-hidden">
-              <button 
+              <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-white/5"
               >
@@ -508,7 +508,7 @@ const PartnerResults = () => (
             quote: "It's like having a full-time sales assistant that never sleeps."
           }
         ].map((result, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -536,7 +536,7 @@ const Pricing = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
       </div>
       <div className="grid gap-8 md:grid-cols-2">
         {/* Plan 1 */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -563,7 +563,7 @@ const Pricing = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
               CRM Webhook Setup
             </li>
           </ul>
-          <button 
+          <button
             onClick={onOpenEstimator}
             className="mt-10 rounded-xl border border-white/10 bg-white/5 py-4 text-sm font-bold text-white transition-colors hover:bg-white/10 cursor-pointer"
           >
@@ -571,7 +571,7 @@ const Pricing = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
           </button>
         </motion.div>
         {/* Plan 2 */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -599,7 +599,7 @@ const Pricing = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
               Priority Support
             </li>
           </ul>
-          <button 
+          <button
             onClick={onOpenEstimator}
             className="mt-10 rounded-xl bg-primary py-4 text-sm font-bold text-white transition-shadow hover:shadow-lg cursor-pointer"
           >
@@ -613,7 +613,7 @@ const Pricing = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
 
 const Onboarding = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
   <section className="px-6 py-24 lg:px-12">
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
@@ -629,7 +629,7 @@ const Onboarding = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => (
           Secure your build slot today. We require a 50% deposit via PayPal to begin the custom architectural scoping of your widget.
         </p>
         <div className="flex flex-col gap-4 w-full max-w-md">
-          <button 
+          <button
             onClick={onOpenEstimator}
             className="flex h-16 items-center justify-center gap-3 rounded-2xl bg-white px-8 text-lg font-bold text-slate-950 transition-transform hover:scale-[1.02] cursor-pointer"
           >
@@ -692,7 +692,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
   const [step, setStep] = useState(1);
   const [servicePage, setServicePage] = useState(0);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
-  
+
   const services = [
     { id: "custom-homes", title: "Custom Homes", desc: "Unique architectural vision", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBmHoiKponNsqwM-2px5Ulod19qmVdlty5X2kEo1K6YQlrFLYFmWuw_hL089QZ2nWpGTXC8V9WXN1F1bHIRAVawqq6vGICj5Shvznj8xMc9IhqhG0HZruUUcTuHy8EeONb59CW0kDMpQL70O3LTKRtiFt9xcoDS7pgeT54C9pPnH1hYiOQuSi7GoTOV0vs80KvHplZKP5azXfUXXFMneCMNggXXZJvmXwLjwOoHf6TTqk6DYpr-NEoeWgNm-exekNffWTTg24X2zXA" },
     { id: "full-reno", title: "Full Home Renovations", desc: "Complete transformation", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKnKtDLRjyQcPTwNBpzOqLqZK6Saf8Xo9QGEh-wjrJTdue1OjFlDYYtzIHPuKpfvunx6c9FARMPDS-BPF9LLv9TbvVC0OEZuxZ0c96S3Knt8y0XgA48GwycMI7dwrTJMGwdQZxcw3J6GeemjWNJu0itDEtxwFuug77JkCyaVfJ9eUWJVYCtLB3H05yU06laIBRKQhd6M1acT4z6Bf9ISjiwo5L6cJUroseNQVu-7jN3wzRwRstqOC4aUs499Uouah3zNYWVB32fMI" },
@@ -712,7 +712,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
   const depositAmount = totalSetupFee / 2;
 
   const toggleService = (id: string) => {
-    setSelectedServices(prev => 
+    setSelectedServices(prev =>
       prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]
     );
   };
@@ -721,14 +721,14 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
         className="absolute inset-0 bg-slate-950/90 backdrop-blur-sm"
       />
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -756,7 +756,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
                 <span className="text-slate-400 text-xs font-medium">{Math.round((step / 4) * 100)}% Completed</span>
               </div>
               <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${(step / 4) * 100}%` }}
                   className="h-full bg-primary rounded-full"
@@ -769,7 +769,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
           <div className="flex-1 overflow-y-auto px-6 py-4 sm:px-10 custom-scrollbar">
             <AnimatePresence mode="wait">
               {step === 1 && (
-                <motion.div 
+                <motion.div
                   key="step1"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -782,19 +782,18 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {currentServices.map((service) => (
-                      <div 
+                      <div
                         key={service.id}
                         onClick={() => toggleService(service.id)}
-                        className={`group relative cursor-pointer rounded-2xl p-3 transition-all border-2 ${
-                          selectedServices.includes(service.id) 
-                            ? "border-primary bg-primary/5" 
+                        className={`group relative cursor-pointer rounded-2xl p-3 transition-all border-2 ${selectedServices.includes(service.id)
+                            ? "border-primary bg-primary/5"
                             : "border-transparent bg-white/5 hover:bg-white/10"
-                        }`}
+                          }`}
                       >
                         <div className="aspect-video rounded-xl mb-3 overflow-hidden relative">
-                          <img 
-                            src={service.img} 
-                            alt={service.title} 
+                          <img
+                            src={service.img}
+                            alt={service.title}
                             className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                             referrerPolicy="no-referrer"
                           />
@@ -809,10 +808,10 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* Service Pagination Controls */}
                   <div className="flex items-center justify-center gap-4 pt-2 pb-4">
-                    <button 
+                    <button
                       onClick={() => setServicePage(prev => Math.max(0, prev - 1))}
                       disabled={servicePage === 0}
                       className={`p-2 rounded-lg border border-white/10 transition-colors ${servicePage === 0 ? "text-slate-700 cursor-not-allowed" : "text-slate-400 hover:text-white hover:bg-white/5"}`}
@@ -821,13 +820,13 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
                     </button>
                     <div className="flex gap-2">
                       {[...Array(totalPages)].map((_, i) => (
-                        <div 
-                          key={i} 
+                        <div
+                          key={i}
                           className={`h-1.5 w-1.5 rounded-full transition-all ${servicePage === i ? "bg-primary w-4" : "bg-white/10"}`}
                         />
                       ))}
                     </div>
-                    <button 
+                    <button
                       onClick={() => setServicePage(prev => Math.min(totalPages - 1, prev + 1))}
                       disabled={servicePage === totalPages - 1}
                       className={`p-2 rounded-lg border border-white/10 transition-colors ${servicePage === totalPages - 1 ? "text-slate-700 cursor-not-allowed" : "text-slate-400 hover:text-white hover:bg-white/5"}`}
@@ -839,7 +838,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
               )}
 
               {step === 2 && (
-                <motion.div 
+                <motion.div
                   key="step2"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -868,7 +867,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
               )}
 
               {step === 3 && (
-                <motion.div 
+                <motion.div
                   key="step3"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -918,7 +917,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
               )}
 
               {step === 4 && (
-                <motion.div 
+                <motion.div
                   key="step4"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -940,7 +939,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
                       Secure Your Setup
                     </h4>
                     <p className="text-xs text-slate-400 mb-6">Lock in your build slot with a 50% deposit. Remaining balance due upon launch.</p>
-                    <button 
+                    <button
                       onClick={onFinish}
                       className="w-full bg-accent-gold hover:bg-yellow-600 text-slate-950 font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg shadow-accent-gold/20"
                     >
@@ -955,14 +954,14 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
           {/* Modal Footer (Navigation) */}
           <div className="px-6 py-6 sm:px-10 border-t border-white/5 bg-slate-900/50">
             <div className="flex items-center justify-between">
-              <button 
+              <button
                 onClick={() => step > 1 && setStep(step - 1)}
                 className={`flex items-center gap-2 font-bold text-sm transition-colors ${step > 1 ? "text-slate-400 hover:text-white" : "text-slate-700 cursor-not-allowed"}`}
               >
                 <ArrowRight size={18} className="rotate-180" /> Back
               </button>
               {step < 4 ? (
-                <button 
+                <button
                   onClick={() => setStep(step + 1)}
                   disabled={selectedServices.length === 0}
                   className={`flex items-center gap-2 rounded-xl px-8 py-3 font-bold text-white transition-all ${selectedServices.length === 0 ? "bg-slate-800 cursor-not-allowed opacity-50" : "bg-primary hover:shadow-lg hover:shadow-primary/20"}`}
@@ -970,7 +969,7 @@ const CostEstimator = ({ isOpen, onClose, onFinish }: { isOpen: boolean; onClose
                   Next Step <ArrowRight size={18} />
                 </button>
               ) : (
-                <button 
+                <button
                   onClick={onClose}
                   className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-8 py-3 font-bold text-white transition-all hover:bg-white/10"
                 >
@@ -1100,7 +1099,7 @@ const CalibrationDashboard = ({ onBack }: { onBack: () => void }) => {
             <ShieldCheck size={18} />
             Trust & Credibility
           </a>
-          
+
           <div className="mt-8 p-4 rounded-xl bg-slate-900 border border-white/5">
             <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-3">Widget Preview</p>
             <div className="aspect-video rounded-lg bg-slate-950 border border-white/5 flex items-center justify-center group cursor-pointer overflow-hidden relative">
@@ -1130,14 +1129,14 @@ const CalibrationDashboard = ({ onBack }: { onBack: () => void }) => {
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Primary Brand Hex</span>
                   <div className="flex gap-2">
                     <div className="size-11 rounded-lg border border-white/10 bg-primary shrink-0 shadow-inner"></div>
-                    <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3 font-mono" type="text" defaultValue="#0300b8"/>
+                    <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3 font-mono" type="text" defaultValue="#0300b8" />
                   </div>
                 </label>
                 <label className="block">
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Gold Highlight Hex</span>
                   <div className="flex gap-2">
                     <div className="size-11 rounded-lg border border-white/10 bg-accent-gold shrink-0 shadow-inner"></div>
-                    <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3 font-mono" type="text" defaultValue="#d4af37"/>
+                    <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3 font-mono" type="text" defaultValue="#d4af37" />
                   </div>
                 </label>
               </div>
@@ -1187,9 +1186,9 @@ const CalibrationDashboard = ({ onBack }: { onBack: () => void }) => {
                   ].map((row, i) => (
                     <tr key={i} className="hover:bg-white/5 transition-colors">
                       <td className="px-6 py-4 font-bold text-sm text-white">{row.name}</td>
-                      <td className="px-6 py-4"><input className="w-full bg-slate-950/50 border-none rounded text-sm py-2 px-3 text-slate-300" type="text" defaultValue={row.t1}/></td>
-                      <td className="px-6 py-4"><input className="w-full bg-slate-950/50 border-none rounded text-sm py-2 px-3 text-slate-300" type="text" defaultValue={row.t2}/></td>
-                      <td className="px-6 py-4"><input className="w-full bg-slate-950/50 border-none rounded text-sm py-2 px-3 text-slate-300" type="text" defaultValue={row.t3}/></td>
+                      <td className="px-6 py-4"><input className="w-full bg-slate-950/50 border-none rounded text-sm py-2 px-3 text-slate-300" type="text" defaultValue={row.t1} /></td>
+                      <td className="px-6 py-4"><input className="w-full bg-slate-950/50 border-none rounded text-sm py-2 px-3 text-slate-300" type="text" defaultValue={row.t2} /></td>
+                      <td className="px-6 py-4"><input className="w-full bg-slate-950/50 border-none rounded text-sm py-2 px-3 text-slate-300" type="text" defaultValue={row.t3} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -1212,7 +1211,7 @@ const CalibrationDashboard = ({ onBack }: { onBack: () => void }) => {
               <div className="space-y-6">
                 <label className="block">
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">Notification Emails</span>
-                  <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3" placeholder="sales@agency.com, leads@agency.com" type="text"/>
+                  <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3" placeholder="sales@agency.com, leads@agency.com" type="text" />
                 </label>
                 <div>
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 block">CRM Integration</span>
@@ -1239,7 +1238,7 @@ const CalibrationDashboard = ({ onBack }: { onBack: () => void }) => {
               <div className="space-y-6">
                 <label className="block">
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 block">PayPal Gateway URL</span>
-                  <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3" placeholder="https://www.paypal.com/ncp/payment/..." type="url"/>
+                  <input className="w-full bg-slate-950 border-white/10 rounded-lg text-slate-100 focus:ring-primary focus:border-primary p-3" placeholder="https://www.paypal.com/ncp/payment/..." type="url" />
                   <p className="text-[10px] text-slate-600 mt-2 font-bold uppercase tracking-wider">Required for instant deposit feature</p>
                 </label>
                 <div className="p-4 rounded-xl bg-primary/5 border border-primary/20">
@@ -1323,13 +1322,13 @@ const ChatBot = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
     setIsLoading(true);
 
     try {
-      const apiKey = process.env.GEMINI_API_KEY;
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
       if (!apiKey) {
-        throw new Error("GEMINI_API_KEY is not defined in the environment.");
+        throw new Error("VITE_GEMINI_API_KEY is not defined in the environment.");
       }
 
       const ai = new GoogleGenAI({ apiKey });
-      
+
       // Gemini history must alternate roles and typically start with 'user'.
       // We skip the initial hardcoded model greeting to ensure the history starts correctly.
       const history = messages
@@ -1337,7 +1336,7 @@ const ChatBot = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
         .map(m => ({ role: m.role, parts: [{ text: m.text }] }));
 
       const chat = ai.chats.create({
-        model: "gemini-3-flash-preview",
+        model: "gemini-2.5-flash",
         config: {
           systemInstruction: `You are the Aiolos AI Sales Assistant. Your goal is to help contractors understand the value of Aiolos Media's custom estimation widgets and guide them through our sales funnel.
           Key Information:
@@ -1395,11 +1394,10 @@ const ChatBot = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
             <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar bg-slate-950/50">
               {messages.map((m, i) => (
                 <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                  <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${
-                    m.role === "user" 
-                      ? "bg-primary text-white rounded-tr-none shadow-lg shadow-primary/10" 
+                  <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${m.role === "user"
+                      ? "bg-primary text-white rounded-tr-none shadow-lg shadow-primary/10"
                       : "bg-white/5 text-slate-300 border border-white/5 rounded-tl-none"
-                  }`}>
+                    }`}>
                     <div className="markdown-body">
                       <Markdown>{m.text}</Markdown>
                     </div>
@@ -1441,7 +1439,7 @@ const ChatBot = ({ onOpenEstimator }: { onOpenEstimator: () => void }) => {
                   placeholder="Ask about our estimators..."
                   className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-4 pr-12 text-sm text-white focus:border-primary outline-none transition-all"
                 />
-                <button 
+                <button
                   onClick={() => handleSend()}
                   disabled={isLoading || !input.trim()}
                   className="absolute right-2 top-1/2 -translate-y-1/2 size-8 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -1505,14 +1503,14 @@ export default function App() {
         <Onboarding onOpenEstimator={() => setIsEstimatorOpen(true)} />
       </main>
       <Footer />
-      
+
       <ChatBot onOpenEstimator={() => setIsEstimatorOpen(true)} />
 
       <AnimatePresence>
         {isEstimatorOpen && (
-          <CostEstimator 
-            isOpen={isEstimatorOpen} 
-            onClose={() => setIsEstimatorOpen(false)} 
+          <CostEstimator
+            isOpen={isEstimatorOpen}
+            onClose={() => setIsEstimatorOpen(false)}
             onFinish={() => {
               setIsEstimatorOpen(false);
               setView('dashboard');

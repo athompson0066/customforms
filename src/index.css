@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", sans-serif;
+  --color-primary: #0300b8;
+  --color-accent-gold: #d4af37;
+  --color-background-dark: #0f0f23;
+  --color-slate-950: #020617;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-display);
+    @apply bg-slate-950 text-slate-100 selection:bg-primary/30 selection:text-white;
+  }
+}
+
+@layer utilities {
+  .gold-gradient-text {
+    background: linear-gradient(to right, #d4af37, #f4d03f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .markdown-body {
+    @apply space-y-2 leading-relaxed;
+  }
+  .markdown-body p {
+    @apply mb-2 last:mb-0;
+  }
+  .markdown-body ul {
+    @apply list-disc list-inside space-y-1 my-2;
+  }
+  .markdown-body ol {
+    @apply list-decimal list-inside space-y-1 my-2;
+  }
+  .markdown-body strong {
+    @apply text-white font-bold;
+  }
+  .markdown-body a {
+    @apply text-primary hover:underline;
+  }
+}
